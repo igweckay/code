@@ -75,7 +75,7 @@ Here is a good video from iTzAdam5X on youtube that further explains how to acce
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/z8evnLrYm9I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
-<h2>Program Challenge:</h2>
+<h2>Programming Challenge:</h2>
 Write a C program that would take in a name from the user and decide whether it was a palindrome.
 
 User Input: halalah<br/>
