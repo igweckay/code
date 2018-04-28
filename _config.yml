@@ -1,7 +1,7 @@
 # Site settings
 title:          code
 description:    "100 days of code in C/C++ and Python"
-baseurl:        ""
+baseurl:        "code"
 url:             ""
 #url:            "https://igweckay.github.io"
 
