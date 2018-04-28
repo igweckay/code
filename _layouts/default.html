@@ -6,14 +6,14 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="{{ site.relative_url }}/">
+        <a href="{{ site.baseurl }}/">
           <h2 class="nav-title">{{ site.title }}</h2>
         </a>
         <ul>
-          <li><a href="{{ '/about' | prepend: site.relative_url }}">About</a></li>
-          <li><a href="{{ '/python' | prepend: site.relative_url }}">Python</a></li>
-          <li><a href="{{ '/ccplusplus' | prepend: site.relative_url }}">C/C++</a></li>
-          <li><a href="{{ site.relative_url }}/">Posts</a></li>
+          <li><a href="{{ '/about' | relative_url }}">About</a></li>
+          <li><a href="{{ '/python' | relative_url }}">Python</a></li>
+          <li><a href="{{ '/ccplusplus' | relative_url }}">C/C++</a></li>
+          <li><a href="{{ site.baseurl }}/">Posts</a></li>
         </ul>
     </div>
   </nav>
