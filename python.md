@@ -2,7 +2,7 @@
 layout: post
 title: "100 Days of Code with Python"
 author: "Kay"
-permalink: /code/python/
+permalink: /python/
 ---
 
 
