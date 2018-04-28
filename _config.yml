@@ -1,0 +1,28 @@
+# Site settings
+title:          code
+description:    "100 days of code in C/C++ and Python"
+baseurl:        "code"
+url:             ""
+#url:            "https://igweckay.github.io"
+
+# Author
+author:
+  name:         Kay Igwe
+  url:          https://kayigwe.com
+  email:        kay.igwe@gmail.com
+
+# Build settings
+markdown:       kramdown
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5

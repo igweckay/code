@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      day one &middot; code
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/code/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/code/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/code/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/code/assets/apple-touch-icon.png">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/code/">
+          <h2 class="nav-title">code</h2>
+        </a>
+        <ul>
+          <li><a href="/code/about">About</a></li>
+          <li><a href="/code/python">Python</a></li>
+          <li><a href="/code/ccplusplus">C/C++</a></li>
+          <li><a href="/code/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        kay
+    
+
+    
+  </div>
+
+  <h1 class="post-title">day one</h1>
+  <div class="post-line"></div>
+
+  <p>Let’s Start with C.</p>
+
+<p>Every C program usually begins with the following programming block.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  printf("<span class="se">\n</span>Hello World!")
+  return 0;
+}</code></pre></figure>
+
+<p>Libraries enable you to be able to use certain functions that are provided by the program. The stdio.h library allows the use of input and output functions. Whenever you se a library, the ‘#include ‘ line has to be included, and the library name itself should be wrapped in &lt; &gt;, as seen above. All the code is wrapped in a main function, with a return of ‘0’, that executes when the program is compiled.</p>
+
+<p>printf, allows you to print something, or display something to the screen upon execution. Anything wrapped in quotation marks is considered a string except for formatting expressions as seen below. The ‘/n’ expression means to add a new line before the string is displayed.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf("<span class="se">\n</span>Hello World!")</code></pre></figure>
+
+<p>The output of these lines of code is as follows…</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  1.</span>
+<span class="p">  2.</span> Hello World!</code></pre></figure>
+
+<p>The numbers just symbolize the blank spaces.</p>
+
+<p>Variables are very useful and are used to store information. Whenever you use a variable, you must initialize the variable by giving it a datatype. You can also initialize the variable by giving it a value, but this is not necessary.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression;
+  expression = "Hello World!";
+
+  return 0;
+}</code></pre></figure>
+
+<p>In the code snippet above, we initialize the variable ‘expression’ as a string, and then assign the string “Hello World”, to it. This means that upon execution, nothing will show up on the screen, but the Hello World string, will still be assigned to expression. In order to have this show up on the screen, you would have to add the following piece of code to the program.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf(expression)</code></pre></figure>
+
+<p>To capture user input into a variable we use the function scanf as seen below.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression="Nothing Entered";
+  printf("/nPlease write an expression: /t");
+  scanf("%s", <span class="ni">&amp;expression);</span>
+  print("%s", expression)
+
+  return 0;
+}</code></pre></figure>
+
+<p>The variable expression is initialized as a string and with the string “Nothing Entered”, although, if nothing is entered by the user, the nothing will be printed. The ampersand, “&amp;” allows the user’s inputs to be saved into “expression”. Try it out for yourself…</p>
+
+<p>Here is a good video from iTzAdam5X on youtube that further explains how to accept user input.</p>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/z8evnLrYm9I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+
+<h2>Program Challenge:</h2>
+<p>Write a C program that would take in a name from the user and decide whether it was a palindrome.</p>
+
+<p>User Input: halalah<br />
+Output: IS a palindrome</p>
+
+<p>User Input: marquester<br />
+Output: NOT a palindrome</p>
+
+<hr />
+
+<h1>100 Days of Code with C/C++</h1>
+
+<p>Welcome to the first day of 100 days of code. It is going to be a fun and exciting journey through programming with C and C++. Each day you will be given a tutorial and a program to code. You must complete coding the program and post it in the slack channel. Solutions will be posted both in the slack channel and on this blog the day after it is assigned.</p>
+
+<p>Feel free to ask any question you would like. You can ping me on Slack and I can answer you there or we can do a Hangout or Slack meeting. Also feel free to post questions in the ‘general’ channel if you would like to ask questions to the group. That way any one could answer your questions as well.</p>
+
+<h2 id="outline"><u>Outline</u></h2>
+<ul>
+  <li>Sign up with Slack</li>
+  <li>The Blog</li>
+  <li>Sign up for a Github Account</li>
+  <li>Receiving Daily Projects</li>
+  <li>Useful Videos</li>
+  <li>Where to ask questions</li>
+</ul>
+
+<h2 id="slack">Slack</h2>
+<p>Sign Up for a slack account via the following link: <a href="https://100daysofcodetk.slack.com/messages/C9YT8D34N/">100daysofCodetk</a> 👍🏼</p>
+
+<p>I will be placing the projects in the ‘projects’ channel daily.</p>
+
+<h2 id="blog">Blog</h2>
+<p>I will also be posting the projects, daily, on this blog.</p>
+
+<h2 id="github">Github</h2>
+<p>Github is a great online repository to save all of your work. Create an account via this link: <a href="https://github.com/join?source=header-home">Join Github</a>
+If you have a github account, great! You are almost ready to begin! Follow this link on how to commit your first document to your repo.</p>
+
+<h2 id="receiving-daily-projects">Receiving Daily projects</h2>
+<p>As written before, all projects will be posted on both the blog and on Slack.</p>
+
+<h2 id="useful-videos">Useful Videos</h2>
+<p>Here is a nice introduction into C programming from Geeky Shares, on youtube.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ot9LoXNSqLU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+<p><br /><br />
+Here is a nice introduction into C++ programming from Buckys C++ Programming Tutorials on youtube.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tvC1WCdV1XU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+
+<h2 id="where-to-ask-question">Where to ask question</h2>
+<p>You can ask all of your questions in the Slack channel.</p>
+
+
+</div>
+
+<div class="pagination">
+  
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2018-04-28 14:50:30 -0400">2018</time> Kay Igwe. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
+    </footer>
+  </body>
+</html>
