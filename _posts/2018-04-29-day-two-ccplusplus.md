@@ -29,6 +29,10 @@ The header file <iostream> enables the use of functions such as cout and cin. co
 where the '\n' character means to go to a new line, as it does in C.
 THe following program computes the quadratic function, where, a, b, and, c are values taken from the user.
 
+Quadratic equation
+
+$$x = \frac{\displaystyle\-b \pm sqrt{b^2 - 4ac}}{2a}$$
+
 {% highlight markdown %}
 // Solve the quadratic equation:
 // a*x^2 + b*x + c = 0
