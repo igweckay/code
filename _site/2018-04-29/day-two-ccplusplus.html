@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      day two with C/C++ &middot; code
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/code/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/code/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/code/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/code/assets/apple-touch-icon.png">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/code/">
+          <h2 class="nav-title">code</h2>
+        </a>
+        <ul>
+          <li><a href="/code/about">About</a></li>
+          <li><a href="/code/python">Python</a></li>
+          <li><a href="/code/ccplusplus">C/C++</a></li>
+          <li><a href="/code/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        Kay Igwe
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2018-04-29 00:00:00 -0400">April 29, 2018</time>
+    
+  </div>
+
+  <h1 class="post-title">day two with C/C++</h1>
+  <div class="post-line"></div>
+
+  <p>Now for C++</p>
+
+<p>Every C program usually begins with the following programming block.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;iostream&gt;</span>
+using namespace std;
+
+int main()
+{
+  cout &lt;&lt; "Hello World!<span class="se">\n</span>";
+  return(0);
+}</code></pre></figure>
+
+<p>The header file <iostream> enables the use of functions such as cout and cin. cout allows us to output content onton the console, while cin allows us to take in user input. The results of the above program is as follows...</iostream></p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"> Hello World!</code></pre></figure>
+
+<p>where the ‘\n’ character means to go to a new line, as it does in C.
+THe following program computes the quadratic function, where, a, b, and, c are values taken from the user.</p>
+
+<p>Solutions to the Quadratic equation are given by:</p>
+
+<script type="math/tex; mode=display">x = \frac{\displaystyle\ -b \pm sqrt({b^2 - 4ac})}{2a}</script>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">// Solve the quadratic equation:
+// a<span class="ge">*x^2 + b*</span>x + c = 0
+
+<span class="gh">#include &lt;iostream&gt;</span>
+<span class="gh">#include &lt;cmath&gt;  //for the sqrt() function</span>
+using namespace std;
+
+int main(){
+
+  double root1, root2, a, b, c, root;
+
+  cout &lt;&lt; "Enter the coefficients, a, b, c";
+  cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+  root = sqrt(B<span class="ge">*B - 4.0 *</span> a <span class="err">*</span> C);
+  root1 = 0.5 <span class="err">*</span> (root - b) / a;
+  root2 = - 0.5 <span class="err">*</span> (root + b) / a;
+  cout &lt;&lt; "The solutions are " &lt;&lt; root1 &lt;&lt; " and " &lt;&lt; root2 &lt;&lt; "/n";
+
+return(0);
+}</code></pre></figure>
+
+<p>The above program will run, however it is not robust and can crash if given an inappropriate value such as a letter, or a space. Also, the program is not written to handle division by zero.</p>
+
+<h2 id="programming-challenge">Programming Challenge:</h2>
+
+<p>Your challenge is to rewrite this program in a way that is more robust and efficient, and is able to take in any value for a, b, and c. The values for a, b, and c, need to be supplied by the user. The goal is to try to break the code written above in as many ways as possible, and then rewrite it in a way where you account for those bugs. Enjoy!</p>
+
+<p>Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition</p>
+
+
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/code/2018-04-28/introducing-python" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2018-04-29 18:17:28 -0400">2018</time> Kay Igwe.
+      </span>
+    </footer>
+  </body>
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</html>

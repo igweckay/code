@@ -7,7 +7,7 @@
 
   <title>
     
-      Introducing 100 Days of Code with Python &middot; code
+      day one with C/C++ &middot; code
     
   </title>
 
@@ -51,44 +51,101 @@
     
   </div>
 
-  <h1 class="post-title">Introducing 100 Days of Code with Python</h1>
+  <h1 class="post-title">day one with C/C++</h1>
   <div class="post-line"></div>
 
-  <p>Welcome to the first day of 100 days of code. It is going to be a fun and exciting journey through programming with Python. Each day you will be given a tutorial and a program to code. You must complete coding the program and post it in the slack channel. Solutions will be posted both in the slack channel and on this blog the day after it is assigned.</p>
+  <p>Let’s Start with C.</p>
 
-<p>Feel free to ask any question you would like. You can ping me on Slack and I can answer you there or we can do a Hangout or Slack meeting. Also feel free to post questions in the ‘general’ channel if you would like to ask questions to the group. That way any one could answer your questions as well.</p>
+<p>Every C program usually begins with the following programming block.</p>
 
-<h2 id="outline">Outline</h2>
-<ul>
-  <li>Sign up with Slack</li>
-  <li>Sign up for a Github Account</li>
-  <li>Receiving Daily Projects</li>
-  <li>Useful Videos</li>
-  <li>Where to ask questions</li>
-</ul>
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
 
-<h2 id="slack">SLACK</h2>
-<p>Sign Up for a slack account via the following link: <a href="https://100dayscodepython.slack.com/messages/CAETU36H2/">100daysCodePython</a> 👍🏼</p>
+int main()
+{
+  printf("<span class="se">\n</span>Hello World!")
+  return 0;
+}</code></pre></figure>
 
-<p>I will be placing the projects in the ‘projects’ channel daily.</p>
+<p>Libraries enable you to be able to use certain functions that are provided by the program. The stdio.h library allows the use of input and output functions. Whenever you se a library, the ‘#include ‘ line has to be included, and the library name itself should be wrapped in &lt; &gt;, as seen above. All the code is wrapped in a main function, with a return of ‘0’, that executes when the program is compiled.</p>
 
-<h2 id="blog">BLOG</h2>
-<p>I will also be posting the projects, daily, on this blog.</p>
+<p>printf, allows you to print something, or display something to the screen upon execution. Anything wrapped in quotation marks is considered a string except for formatting expressions as seen below. The ‘/n’ expression means to add a new line before the string is displayed.</p>
 
-<h2 id="github">Github</h2>
-<p>Github is a great online repository to save all of your work. Create an account via this link: <a href="https://github.com/join?source=header-home">Join Github</a>
-If you have a github account, great! You are almost ready to begin! Follow this link on how to commit your first document to your repo.</p>
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf("<span class="se">\n</span>Hello World!")</code></pre></figure>
 
-<h2 id="receiving-daily-projects">Receiving Daily projects</h2>
-<p>As written before, all projects will be posted on both the blog and on Slack.</p>
+<p>The output of these lines of code is as follows…</p>
 
-<h2 id="useful-videos">Useful Videos</h2>
-<p>thenewboston on youtube has a bunch of great programming video tutorials. Here is one of them. I will be pointing to these videos as time goes on. Here is their first video about installing Python. For this 100 days of Code, we will be working with Python 3.*</p>
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  1.</span>
+<span class="p">  2.</span> Hello World!</code></pre></figure>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/HBxCHonP6Ro?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+<p>The numbers just symbolize the blank spaces.</p>
 
-<h2 id="where-to-ask-question">Where to ask question</h2>
-<p>You can ask all of your questions in the Slack channel.</p>
+<p>Variables are very useful and are used to store information. Whenever you use a variable, you must initialize the variable by giving it a datatype. You can also initialize the variable by giving it a value, but this is not necessary.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression;
+  expression = "Hello World!";
+
+  return 0;
+}</code></pre></figure>
+
+<p>In the code snippet above, we initialize the variable ‘expression’ as a string, and then assign the string “Hello World”, to it. This means that upon execution, nothing will show up on the screen, but the Hello World string, will still be assigned to expression. In order to have this show up on the screen, you would have to add the following piece of code to the program.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf(expression)</code></pre></figure>
+
+<p>To capture user input into a variable we use the function scanf as seen below.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression="Nothing Entered";
+  printf("/nPlease write an expression: /t");
+  scanf("%s", <span class="ni">&amp;expression);</span>
+  print("%s", expression)
+
+  return 0;
+}</code></pre></figure>
+
+<p>The variable expression is initialized as a string and with the string “Nothing Entered”, although, if nothing is entered by the user, the nothing will be printed. The ampersand, “&amp;” allows the user’s inputs to be saved into “expression”. Try it out for yourself…</p>
+
+<p>Here is a good video from iTzAdam5X on youtube that further explains how to accept user input.</p>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/z8evnLrYm9I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+
+<h2>Program Challenge:</h2>
+<p>Write a C program that would take in a name from the user and decide whether it was a palindrome.</p>
+
+<p>User Input: halalah<br />
+Output: IS a palindrome</p>
+
+<p>User Input: marquester<br />
+Output: NOT a palindrome</p>
+
+<h2 id="solution">Solution:</h2>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include&lt;stdio.h&gt;</span>
+int main ()
+{
+  char name<span class="err">[</span>]; int length, check, size = len(name), i =0, flag=0;
+
+  printf("Please enter your name<span class="se">\n</span>"); scanf("%s",<span class="ni">&amp;name);</span>
+
+  while (flag == 0 || (i&gt;int(size/2)){
+    if(name<span class="p">[</span><span class="nv">i</span><span class="p">]</span> != name<span class="p">[</span><span class="nv">size-1</span><span class="p">]</span>){
+      flag++;
+      printf("%s is not a Palindrome", name)
+    }
+    i++; size--;
+  }
+  if flag == 0{
+    printf("%s is a Palindrome", name);
+  }
+return 0;
+}</code></pre></figure>
+
 
 
 </div>
@@ -98,8 +155,6 @@ If you have a github account, great! You are almost ready to begin! Follow this 
     <a href="/code/2018-04-28/introducing-ccplusplus" class="left arrow">&#8592;</a>
   
   
-    <a href="/code/2018-04-27/machine_deep_learning" class="right arrow">&#8594;</a>
-  
 
   <a href="#" class="top">Top</a>
 </div>
@@ -108,8 +163,18 @@ If you have a github account, great! You are almost ready to begin! Follow this 
 
     <footer>
       <span>
-        &copy; <time datetime="2018-04-28 14:50:30 -0400">2018</time> Kay Igwe. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-04-29 18:17:28 -0400">2018</time> Kay Igwe.
       </span>
     </footer>
   </body>
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </html>

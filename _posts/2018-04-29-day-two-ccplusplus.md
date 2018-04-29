@@ -29,9 +29,9 @@ The header file <iostream> enables the use of functions such as cout and cin. co
 where the '\n' character means to go to a new line, as it does in C.
 THe following program computes the quadratic function, where, a, b, and, c are values taken from the user.
 
-Quadratic equation
+Solutions to the Quadratic equation are given by:
 
-$$x = \frac{\displaystyle\-b \pm sqrt{b^2 - 4ac}}{2a}$$
+$$x = \frac{\displaystyle\ -b \pm sqrt({b^2 - 4ac})}{2a}$$
 
 {% highlight markdown %}
 // Solve the quadratic equation:
@@ -59,6 +59,8 @@ return(0);
 
 The above program will run, however it is not robust and can crash if given an inappropriate value such as a letter, or a space. Also, the program is not written to handle division by zero.
 
-Programming Challenge:
+## Programming Challenge:
 
 Your challenge is to rewrite this program in a way that is more robust and efficient, and is able to take in any value for a, b, and c. The values for a, b, and c, need to be supplied by the user. The goal is to try to break the code written above in as many ways as possible, and then rewrite it in a way where you account for those bugs. Enjoy!
+
+Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition
