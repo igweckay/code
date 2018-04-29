@@ -82,3 +82,26 @@ Output: IS a palindrome
 
 User Input: marquester<br/>
 Output: NOT a palindrome
+
+Solution:
+{% highlight markdown %}
+#include<stdio.h>
+int main ()
+{
+  char name[]; int length, check, size = len(name), i =0, flag=0;
+
+  printf("Please enter your name\n"); scanf("%s",&name);
+
+  while (flag == 0 || (i>int(size/2)){
+    if(name[i] != name[size-1]){
+      flag++;
+      printf("%s is not a Palindrome", name)
+    }
+    i++; size--;
+  }
+  if flag == 0{
+    printf("%s is a Palindrome", name);
+  }
+return 0;
+}
+{% endhighlight %}
