@@ -66,7 +66,7 @@ Your challenge is to rewrite this program in a way that is more robust and effic
 
 Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition
 
---------------------------------------------------------------------------------
+--------------------------------------------------------------
 <h1>day one</h1>
 
 Let's Start with C.
