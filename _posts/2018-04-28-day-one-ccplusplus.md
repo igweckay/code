@@ -83,7 +83,7 @@ Output: IS a palindrome
 User Input: marquester<br/>
 Output: NOT a palindrome
 
-##Solution:
+## Solution:
 {% highlight markdown %}
 #include<stdio.h>
 int main ()
