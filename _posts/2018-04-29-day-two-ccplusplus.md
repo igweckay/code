@@ -63,4 +63,5 @@ The above program will run, however it is not robust and can crash if given an i
 
 Your challenge is to rewrite this program in a way that is more robust and efficient, and is able to take in any value for a, b, and c. The values for a, b, and c, need to be supplied by the user. The goal is to try to break the code written above in as many ways as possible, and then rewrite it in a way where you account for those bugs. Enjoy!
 
-Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition
+<br/><br/><br/><br/>
+<i>Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition</i>
