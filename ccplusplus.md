@@ -142,36 +142,30 @@ Your challenge is to rewrite this program in a way that is more robust and effic
   using namespace std;
 
   int main() {
-  	double root1, root, root2; string a, b, c; double x; bool is_valid; int flag = 1;
+  	double root1, root, root2; string a, b, c; double x; int flag = 1;
 
   	while (flag > 0) {
   		flag = 0;
   		cout << "Enter numeric value for a: "; cin >> a;
   		try {
   			x = std::stod(a);
-  			is_valid = true;
   		}
   		catch (std::exception& ia) {
-  			is_valid = false;
   			flag ++;
   		}
 
   		cout << "Enter numeric value for b: "; cin >> b;
   		try {
   			x = std::stod(b);
-  			is_valid = true;
   		}
   		catch (std::exception& ia) {
-  			is_valid = false;
   			flag ++;
   		}
   		cout << "Enter a numeric value for c: "; cin >> c;
   		try {
   			x = std::stod(a);
-  			is_valid = true;
   		}
   		catch (std::exception& ia) {
-  			is_valid = false;
   			flag ++;
   		}
   		if (flag > 0) {

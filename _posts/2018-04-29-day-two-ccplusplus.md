@@ -80,17 +80,14 @@ Your challenge is to rewrite this program in a way that is more robust and effic
   		cout << "Enter numeric value for a: "; cin >> a;
   		try {
   			x = std::stod(a);
-  			is_valid = true;
   		}
   		catch (std::exception& ia) {
-  			is_valid = false;
   			flag ++;
   		}
 
   		cout << "Enter numeric value for b: "; cin >> b;
   		try {
   			x = std::stod(b);
-  			is_valid = true;
   		}
   		catch (std::exception& ia) {
   			flag ++;
