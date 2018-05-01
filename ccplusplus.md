@@ -60,7 +60,7 @@ Write a program that converts a constant Fahrenheit temperature into the corresp
   212.0 F = 100.0 C
 {% endhighlight %}
 
-Make sure the formatting is the same as the one above. You can use either 'cout' or 'printf' for this exercise. 
+Make sure the formatting is the same as the one above. You can use either 'cout' or 'printf' for this exercise.
 It should not look like the one below, (which is unformatted)...
 {% highlight markdown %}
   100.0F = 37.8 C
