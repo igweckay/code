@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "day three"
+title: "day three with C/C++"
 author: "kay"
-permalink: /ccplusplus/
 ---
 
 More C++

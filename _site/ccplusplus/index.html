@@ -46,9 +46,6 @@
     
 
     
-      <br>
-      <span>on&nbsp;</span><time datetime="2018-04-30 00:00:00 -0400">April 30, 2018</time>
-    
   </div>
 
   <h1 class="post-title">day three</h1>
@@ -109,13 +106,275 @@ It should not look like the one below, (which is unformatted)…</p>
 <p><br /><br /><br /><br />
 <i>Reference: C++ for Computer Scientists and Engineers</i></p>
 
+<hr />
+<h1> day two </h1>
+<p>Now for C++</p>
+
+<p>Every C program usually begins with the following programming block.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;iostream&gt;</span>
+using namespace std;
+
+int main()
+{
+  cout &lt;&lt; "Hello World!<span class="se">\n</span>";
+  return(0);
+}</code></pre></figure>
+
+<p>The header file <iostream> enables the use of functions such as cout and cin. cout allows us to output content onton the console, while cin allows us to take in user input. The results of the above program is as follows...</iostream></p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  
+ Hello World!</code></pre></figure>
+
+<p>where the ‘\n’ character means to go to a new line, as it does in C.
+THe following program computes the quadratic function, where, a, b, and, c are values taken from the user.</p>
+
+<p>Solutions to the Quadratic equation are given by:</p>
+
+<script type="math/tex; mode=display">x = \frac{\displaystyle\ -b \pm sqrt({b^2 - 4ac})}{2a}</script>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">// Solve the quadratic equation:
+// a<span class="ge">*x^2 + b*</span>x + c = 0
+
+<span class="gh">#include &lt;iostream&gt;</span>
+<span class="gh">#include &lt;cmath&gt;  //for the sqrt() function</span>
+using namespace std;
+
+int main(){
+
+  double root1, root2, a, b, c, root;
+
+  cout &lt;&lt; "Enter the coefficients, a, b, c";
+  cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+  root = sqrt(B<span class="ge">*B - 4.0 *</span> a <span class="err">*</span> C);
+  root1 = 0.5 <span class="err">*</span> (root - b) / a;
+  root2 = - 0.5 <span class="err">*</span> (root + b) / a;
+  cout &lt;&lt; "The solutions are " &lt;&lt; root1 &lt;&lt; " and " &lt;&lt; root2 &lt;&lt; "/n";
+
+return(0);  
+}</code></pre></figure>
+
+<p>The above program will run, however it is not robust and can crash if given an inappropriate value such as a letter, or a space. Also, the program is not written to handle division by zero.</p>
+
+<h2 id="programming-challenge-1">Programming Challenge:</h2>
+
+<p>Your challenge is to rewrite this program in a way that is more robust and efficient, and is able to take in any value for a, b, and c. The values for a, b, and c, need to be supplied by the user. The goal is to try to break the code written above in as many ways as possible, and then rewrite it in a way where you account for those bugs. Enjoy!</p>
+
+<h2 id="solution">Solution:</h2>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  #include <span class="nt">&lt;iostream&gt;</span>
+  #include <span class="nt">&lt;cmath&gt;</span>
+  #include <span class="nt">&lt;cctype&gt;</span>
+  #include <span class="nt">&lt;string&gt;</span>
+  using namespace std;
+
+  int main() {
+  	double root1, root, root2; string a, b, c; double x; bool is_valid; int flag = 1;
+
+  	while (flag &gt; 0) {
+  		flag = 0;
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">a:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; a;
+  		try {
+  			x = std::stod(a);
+  			is_valid = true;
+  		}
+  		catch (std::exception&amp; ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">b:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; b;
+  		try {
+  			x = std::stod(b);
+  			is_valid = true;
+  		}
+  		catch (std::exception&amp; ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">a</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">c:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; c;
+  		try {
+  			x = std::stod(a);
+  			is_valid = true;
+  		}
+  		catch (std::exception&amp; ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+  		if (flag &gt; 0) {
+  			cout &lt;&lt; "One or more numbers entered are not numerics, please reenter values<span class="se">\n\n</span>";
+  		}
+  	}
+
+  	if (stod(a)==0) {
+  		cout &lt;&lt; "Anything divided by zero is INFINITY.";
+  	}
+  	else {
+  		root = atof(b.c_str())<span class="ge">*atof(b.c_str()) - 4.0 *</span> atof(a.c_str()) <span class="err">*</span> atof(c.c_str());
+  		if (root &lt; 0) {
+  			cout &lt;&lt; "Values result in negative root, so coefficients are INVALID";
+  		}
+  		else {
+  			root = sqrt(root);
+  			root1 = 0.5 <span class="err">*</span> (root - atof(b.c_str()) / atof(a.c_str()));
+  			root2 = -0.5 <span class="err">*</span> (root + atof(b.c_str())) / atof(a.c_str());
+  			cout &lt;&lt; "The solutions are " &lt;&lt; root1 &lt;&lt; " and " &lt;&lt; root2 &lt;&lt; "<span class="se">\n</span>";
+  		}		
+  	}
+
+  	system("pause");
+
+  	return(0);
+  }</code></pre></figure>
+
+<p><br /><br /><br /><br />
+<i>Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition</i></p>
+
+<hr />
+<h1>day one</h1>
+
+<p>Let’s Start with C.</p>
+
+<p>Every C program usually begins with the following programming block.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  printf("<span class="se">\n</span>Hello World!")
+  return 0;
+}</code></pre></figure>
+
+<p>Libraries enable you to be able to use certain functions that are provided by the program. The stdio.h library allows the use of input and output functions. Whenever you se a library, the ‘#include ‘ line has to be included, and the library name itself should be wrapped in &lt; &gt;, as seen above. All the code is wrapped in a main function, with a return of ‘0’, that executes when the program is compiled.</p>
+
+<p>printf, allows you to print something, or display something to the screen upon execution. Anything wrapped in quotation marks is considered a string except for formatting expressions as seen below. The ‘/n’ expression means to add a new line before the string is displayed.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf("<span class="se">\n</span>Hello World!")</code></pre></figure>
+
+<p>The output of these lines of code is as follows…</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  1.</span>
+<span class="p">  2.</span> Hello World!</code></pre></figure>
+
+<p>The numbers just symbolize the blank spaces.</p>
+
+<p>Variables are very useful and are used to store information. Whenever you use a variable, you must initialize the variable by giving it a datatype. You can also initialize the variable by giving it a value, but this is not necessary.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression;
+  expression = "Hello World!";
+
+  return 0;
+}</code></pre></figure>
+
+<p>In the code snippet above, we initialize the variable ‘expression’ as a string, and then assign the string “Hello World”, to it. This means that upon execution, nothing will show up on the screen, but the Hello World string, will still be assigned to expression. In order to have this show up on the screen, you would have to add the following piece of code to the program.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf(expression)</code></pre></figure>
+
+<p>To capture user input into a variable we use the function scanf as seen below.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include &lt;stdio.h&gt;</span>
+
+int main()
+{
+  string expression="Nothing Entered";
+  printf("/nPlease write an expression: /t");
+  scanf("%s", <span class="ni">&amp;expression);</span>
+  print("%s", expression)
+
+  return 0;
+}</code></pre></figure>
+
+<p>The variable expression is initialized as a string and with the string “Nothing Entered”, although, if nothing is entered by the user, the nothing will be printed. The ampersand, “&amp;” allows the user’s inputs to be saved into “expression”. Try it out for yourself…</p>
+
+<p>Here is a good video from iTzAdam5X on youtube that further explains how to accept user input.</p>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/z8evnLrYm9I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+
+<h2>Programming Challenge:</h2>
+<p>Write a C program that would take in a name from the user and decide whether it was a palindrome.</p>
+
+<p>User Input: halalah<br />
+Output: IS a palindrome</p>
+
+<p>User Input: marquester<br />
+Output: NOT a palindrome</p>
+
+<h2 id="solution-1">Solution:</h2>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="gh">#include&lt;stdio.h&gt;</span>
+int main ()
+{
+  char name<span class="err">[</span>]; int length, check, size = len(name), i =0, flag=0;
+
+  printf("Please enter your name<span class="se">\n</span>"); scanf("%s",<span class="ni">&amp;name);</span>
+
+  while (flag == 0 || (i&gt;int(size/2)){
+    if(name<span class="p">[</span><span class="nv">i</span><span class="p">]</span> != name<span class="p">[</span><span class="nv">size-1</span><span class="p">]</span>){
+      flag++;
+      printf("%s is not a Palindrome", name)
+    }
+    i++; size--;
+  }
+  if flag == 0{
+    printf("%s is a Palindrome", name);
+  }
+return 0;
+}</code></pre></figure>
+
+<hr />
+
+<h1>100 Days of Code with C/C++</h1>
+
+<p>Welcome to the first day of 100 days of code. It is going to be a fun and exciting journey through programming with C and C++. Each day you will be given a tutorial and a program to code. You must complete coding the program and post it in the slack channel. Solutions will be posted both in the slack channel and on this blog the day after it is assigned.</p>
+
+<p>Feel free to ask any question you would like. You can ping me on Slack and I can answer you there or we can do a Hangout or Slack meeting. Also feel free to post questions in the ‘general’ channel if you would like to ask questions to the group. That way any one could answer your questions as well.</p>
+
+<p>The Book <a href="https://7chan.org/pr/src/TheBook.pdf">C++ for Computer Science and Engineering</a></p>
+
+<h2 id="outline"><u>Outline</u></h2>
+<ul>
+  <li>Sign up with Slack</li>
+  <li>The Blog</li>
+  <li>Sign up for a Github Account</li>
+  <li>Receiving Daily Projects</li>
+  <li>Useful Videos</li>
+  <li>Where to ask questions</li>
+</ul>
+
+<h2 id="slack">Slack</h2>
+<p>Sign Up for a slack account via the following link: <a href="https://100daysofcodetk.slack.com/messages/C9YT8D34N/">100daysofCodetk</a> 👍🏼</p>
+
+<p>I will be placing the projects in the ‘projects’ channel daily.</p>
+
+<h2 id="blog">Blog</h2>
+<p>I will also be posting the projects, daily, on this blog.</p>
+
+<h2 id="github">Github</h2>
+<p>Github is a great online repository to save all of your work. Create an account via this link: <a href="https://github.com/join?source=header-home">Join Github</a>
+If you have a github account, great! You are almost ready to begin! Follow this link on how to commit your first document to your repo.</p>
+
+<h2 id="receiving-daily-projects">Receiving Daily projects</h2>
+<p>As written before, all projects will be posted on both the blog and on Slack.</p>
+
+<h2 id="useful-videos">Useful Videos</h2>
+<p>Here is a nice introduction into C programming from Geeky Shares, on youtube.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ot9LoXNSqLU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+<p><br /><br />
+Here is a nice introduction into C++ programming from Buckys C++ Programming Tutorials on youtube.</p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tvC1WCdV1XU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></center>
+
+<h2 id="where-to-ask-question">Where to ask question</h2>
+<p>You can ask all of your questions in the Slack channel.</p>
+
 
 </div>
 
 <div class="pagination">
   
-  
-    <a href="/code/2018-04-29/day-two-ccplusplus" class="right arrow">&#8594;</a>
   
 
   <a href="#" class="top">Top</a>
@@ -125,7 +384,7 @@ It should not look like the one below, (which is unformatted)…</p>
 
     <footer>
       <span>
-        &copy; <time datetime="2018-04-30 22:42:32 -0400">2018</time> Kay Igwe.
+        &copy; <time datetime="2018-04-30 22:50:34 -0400">2018</time> Kay Igwe.
       </span>
     </footer>
   </body>

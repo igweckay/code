@@ -71,7 +71,7 @@ It should not look like the one below, (which is unformatted)...
 <br/><br/><br/><br/>
 <i>Reference: C++ for Computer Scientists and Engineers</i>
 
---------------------------------------------------------------
+---------------------------------------------
 <h1> day two </h1>
 Now for C++
 
@@ -134,7 +134,72 @@ Your challenge is to rewrite this program in a way that is more robust and effic
 
 
 ## Solution:
+{% highlight markdown %}
+  #include <iostream>
+  #include <cmath>
+  #include <cctype>
+  #include <string>
+  using namespace std;
 
+  int main() {
+  	double root1, root, root2; string a, b, c; double x; bool is_valid; int flag = 1;
+
+  	while (flag > 0) {
+  		flag = 0;
+  		cout << "Enter numeric value for a: "; cin >> a;
+  		try {
+  			x = std::stod(a);
+  			is_valid = true;
+  		}
+  		catch (std::exception& ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+
+  		cout << "Enter numeric value for b: "; cin >> b;
+  		try {
+  			x = std::stod(b);
+  			is_valid = true;
+  		}
+  		catch (std::exception& ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+  		cout << "Enter a numeric value for c: "; cin >> c;
+  		try {
+  			x = std::stod(a);
+  			is_valid = true;
+  		}
+  		catch (std::exception& ia) {
+  			is_valid = false;
+  			flag ++;
+  		}
+  		if (flag > 0) {
+  			cout << "One or more numbers entered are not numerics, please reenter values\n\n";
+  		}
+  	}
+
+  	if (stod(a)==0) {
+  		cout << "Anything divided by zero is INFINITY.";
+  	}
+  	else {
+  		root = atof(b.c_str())*atof(b.c_str()) - 4.0 * atof(a.c_str()) * atof(c.c_str());
+  		if (root < 0) {
+  			cout << "Values result in negative root, so coefficients are INVALID";
+  		}
+  		else {
+  			root = sqrt(root);
+  			root1 = 0.5 * (root - atof(b.c_str()) / atof(a.c_str()));
+  			root2 = -0.5 * (root + atof(b.c_str())) / atof(a.c_str());
+  			cout << "The solutions are " << root1 << " and " << root2 << "\n";
+  		}		
+  	}
+
+  	system("pause");
+
+  	return(0);
+  }
+{% endhighlight %}
 <br/><br/><br/><br/>
 <i>Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition</i>
 

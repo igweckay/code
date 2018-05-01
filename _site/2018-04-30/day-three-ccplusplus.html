@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      day three with C/C++ &middot; code
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/code/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/code/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/code/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/code/assets/apple-touch-icon.png">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/code/">
+          <h2 class="nav-title">code</h2>
+        </a>
+        <ul>
+          <li><a href="/code/about">About</a></li>
+          <li><a href="/code/python">Python</a></li>
+          <li><a href="/code/ccplusplus">C/C++</a></li>
+          <li><a href="/code/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        kay
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2018-04-30 00:00:00 -0400">April 30, 2018</time>
+    
+  </div>
+
+  <h1 class="post-title">day three with C/C++</h1>
+  <div class="post-line"></div>
+
+  <p>More C++</p>
+
+<p>In C++ there are several ways to display text to a screen. One of them, we have used before, the ‘cout’ command. The one we will use today is the ‘printf’ command. Both printf and cout can preform the same function, one may just require less typing depending on the task. For example
+—output formatting—</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  1.</span> cout &lt;&lt; hello     world 18!;
+<span class="p">  2.</span> cout &lt;&lt; hello<span class="se">\t</span>world 18!;</code></pre></figure>
+
+<p>prints output</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  1.</span> hello     world 18!
+<span class="p">  2.</span> hello     world 18!</code></pre></figure>
+
+<p>All of the spaces are not ignored. However, if we use the printf command and use the ‘\t’, we get the same results as above.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  printf("hello <span class="se">\t</span> world 18!")</code></pre></figure>
+
+<p>Below is a full program example.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  # include <span class="nt">&lt;iostream&gt;</span>
+  using namespace std;
+
+  int main(){
+    char name<span class="err">[</span>] = "Maria";
+    printf("<span class="se">\n</span>hello<span class="se">\t</span> %s, how are you?<span class="se">\n</span>", name);
+    cout&lt;&lt;"<span class="se">\n</span>hello<span class="se">\t</span>&lt;&lt; name&lt;&lt; ", how are you?";
+  return(0);
+  }</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  hello     Maria, how are you?
+  hello     Maria, how are you?</code></pre></figure>
+
+<h2 id="programming-challenge">Programming Challenge:</h2>
+
+<p>Conversion of a Fahrenheit Temperature to Celsius<br />
+When dealing with temperatures, one common problem is the conversion of a temperature in Fahrenheit degrees into Celsius degrees. The formula is</p>
+
+<script type="math/tex; mode=display">x = \frac{\displaystyle\ 5( F - 32 )}{9}</script>
+
+<p>Write a program that converts a constant Fahrenheit temperature into the correspondingCelsius temperature. Prompt the user to enter a Fahrenheit temperature. Then, calculate the Celsius equivalent and display the results using the format shown below. You should produce precisely these results; observe the formatting. Make three test runs of the program entering the indicated Fahrenheit temperatures.</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  100.</span>0 F =  37.8 C
+<span class="p">  32.</span>0 F =    0.0 C
+<span class="p">  212.</span>0 F = 100.0 C</code></pre></figure>
+
+<p>Make sure the formatting is the same as the one above. You can use either ‘cout’ or ‘printf’ for this exercise.
+It should not look like the one below, (which is unformatted)…</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">  100.</span>0F = 37.8 C
+<span class="p">  32.</span>0F = 0.0C
+<span class="p">  212.</span>0 F = 100.0 C</code></pre></figure>
+
+<p><br /><br /><br /><br />
+<i>Reference: C++ for Computer Scientists and Engineers</i></p>
+
+
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/code/2018-04-29/day-two-ccplusplus" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2018-04-30 22:50:34 -0400">2018</time> Kay Igwe.
+      </span>
+    </footer>
+  </body>
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</html>
