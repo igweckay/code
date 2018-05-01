@@ -1,11 +1,27 @@
 ---
 layout: post
-title: "100 Days of Code with Python"
+title: "day zero"
 author: "Kay"
 permalink: /python/
 ---
 
+## Environment Setup
 
+Make sure you have Python installed. We will be using Python3 throughout this 100 days. If you have a mac or a linux machine, you can check by opening up a terminal and typing the following commands.
+
+{% highlight markdown %}
+  python --version
+{% endhighlight %}
+
+If you have a mac, it probably comes with Python 2.1.10 preinstalled.<br/>
+Output:
+{% highlight markdown %}
+  Python 2.7.10
+{% endhighlight %}
+
+
+
+--------------------------------------------------------------------
 Welcome to the first day of 100 days of code. It is going to be a fun and exciting journey through programming with Python. Each day you will be given a tutorial and a program to code. You must complete coding the program and post it in the slack channel. Solutions will be posted both in the slack channel and on this blog the day after it is assigned.
 
 Feel free to ask any question you would like. You can ping me on Slack and I can answer you there or we can do a Hangout or Slack meeting. Also feel free to post questions in the 'general' channel if you would like to ask questions to the group. That way any one could answer your questions as well.
