@@ -169,36 +169,30 @@ return(0);
   using namespace std;
 
   int main() {
-  	double root1, root, root2; string a, b, c; double x; bool is_valid; int flag = 1;
+  	double root1, root, root2; string a, b, c; double x; int flag = 1;
 
   	while (flag &gt; 0) {
   		flag = 0;
   		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">a:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; a;
   		try {
   			x = std::stod(a);
-  			is_valid = true;
   		}
   		catch (std::exception&amp; ia) {
-  			is_valid = false;
   			flag ++;
   		}
 
   		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">b:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; b;
   		try {
   			x = std::stod(b);
-  			is_valid = true;
   		}
   		catch (std::exception&amp; ia) {
-  			is_valid = false;
   			flag ++;
   		}
   		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">a</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">c:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; c;
   		try {
   			x = std::stod(a);
-  			is_valid = true;
   		}
   		catch (std::exception&amp; ia) {
-  			is_valid = false;
   			flag ++;
   		}
   		if (flag &gt; 0) {
@@ -384,7 +378,7 @@ Here is a nice introduction into C++ programming from Buckys C++ Programming Tut
 
     <footer>
       <span>
-        &copy; <time datetime="2018-04-30 23:40:48 -0400">2018</time> Kay Igwe.
+        &copy; <time datetime="2018-05-03 09:49:18 -0400">2018</time> Kay Igwe.
       </span>
     </footer>
   </body>

@@ -105,6 +105,67 @@ return(0);
 
 <p>Your challenge is to rewrite this program in a way that is more robust and efficient, and is able to take in any value for a, b, and c. The values for a, b, and c, need to be supplied by the user. The goal is to try to break the code written above in as many ways as possible, and then rewrite it in a way where you account for those bugs. Enjoy!</p>
 
+<h2 id="solution">Solution:</h2>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">  #include <span class="nt">&lt;iostream&gt;</span>
+  #include <span class="nt">&lt;cmath&gt;</span>
+  #include <span class="nt">&lt;cctype&gt;</span>
+  #include <span class="nt">&lt;string&gt;</span>
+  using namespace std;
+
+  int main() {
+  	double root1, root, root2; string a, b, c; double x; int flag = 1;
+
+  	while (flag &gt; 0) {
+  		flag = 0;
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">a:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; a;
+  		try {
+  			x = std::stod(a);
+  		}
+  		catch (std::exception&amp; ia) {
+  			flag ++;
+  		}
+
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">b:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; b;
+  		try {
+  			x = std::stod(b);
+  		}
+  		catch (std::exception&amp; ia) {
+  			flag ++;
+  		}
+  		cout <span class="nt">&lt;</span><span class="err">&lt;</span> <span class="err">"</span><span class="na">Enter</span> <span class="na">a</span> <span class="na">numeric</span> <span class="na">value</span> <span class="na">for</span> <span class="na">c:</span> <span class="err">";</span> <span class="na">cin</span> <span class="nt">&gt;</span>&gt; c;
+  		try {
+  			x = std::stod(a);
+  		}
+  		catch (std::exception&amp; ia) {
+  			flag ++;
+  		}
+  		if (flag &gt; 0) {
+  			cout &lt;&lt; "One or more numbers entered are not numerics, please reenter values<span class="se">\n\n</span>";
+  		}
+  	}
+
+  	if (stod(a)==0) {
+  		cout &lt;&lt; "Anything divided by zero is INFINITY.";
+  	}
+  	else {
+  		root = atof(b.c_str())<span class="ge">*atof(b.c_str()) - 4.0 *</span> atof(a.c_str()) <span class="err">*</span> atof(c.c_str());
+  		if (root &lt; 0) {
+  			cout &lt;&lt; "Values result in negative root, so coefficients are INVALID";
+  		}
+  		else {
+  			root = sqrt(root);
+  			root1 = 0.5 <span class="err">*</span> (root - atof(b.c_str()) / atof(a.c_str()));
+  			root2 = -0.5 <span class="err">*</span> (root + atof(b.c_str())) / atof(a.c_str());
+  			cout &lt;&lt; "The solutions are " &lt;&lt; root1 &lt;&lt; " and " &lt;&lt; root2 &lt;&lt; "<span class="se">\n</span>";
+  		}		
+  	}
+
+  	system("pause");
+
+  	return(0);
+  }</code></pre></figure>
+
 <p><br /><br /><br /><br />
 <i>Reference: Book: C++ for Scientists, Engineers and Mathematicians 2nd Edition</i></p>
 
@@ -126,7 +187,7 @@ return(0);
 
     <footer>
       <span>
-        &copy; <time datetime="2018-04-30 23:40:48 -0400">2018</time> Kay Igwe.
+        &copy; <time datetime="2018-05-03 09:49:18 -0400">2018</time> Kay Igwe.
       </span>
     </footer>
   </body>
