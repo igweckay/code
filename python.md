@@ -1,9 +1,18 @@
 ---
 layout: post
-title: "day one"
+title: "day two"
 author: "Kay"
 permalink: /python/
 ---
+
+Today's challenge will be to code the first 3 challenges in Project Euler.
+These programs are a great way to exercise some of your new skills. Slack me if you have any questions.
+
+Link to [Project Euler](https://projecteuler.net/archives)
+
+----------------------------------------------------
+
+<h1>day one</h1>
 
 Today we will learn about variable assignment, user input, and printing to the console.
 
