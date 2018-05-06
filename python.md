@@ -83,6 +83,26 @@ Best Solution, Chip's solution. My solution follows...
 
 
  Problem 3:
+ Problem 3:
+
+ {% highlight python %}
+
+   num = 600851475143
+   i = 2
+   while i * i < num:
+        while num % i == 0:
+            num = num / i
+        i = i + 1
+   print(num)
+
+ {% endhighlight %}
+
+ answer:
+ {% highlight python %}
+   6857
+ {% endhighlight %}
+ <i>[reference for 3](https://www.w3resource.com/euler-project/euler-problem3.php)</i>
+ 
 ----------------------------------------------------
 
 <h1>day one</h1>
