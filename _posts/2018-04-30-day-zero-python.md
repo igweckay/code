@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "day zero with Python"
+title:  "day zero with python"
 author: "kay"
 ---
 
