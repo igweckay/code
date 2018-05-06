@@ -23,6 +23,7 @@ The results of an experiment are stored in a five-dimensional array:
 {% endhighlight %}
 
 One requirement is to find the average of all elements. Write two programs to calculate this average; one version should use the standard array notation, whereas the other should use a pointer. Compare the times taken by the two programs for various values of SIZE_1, ..., SIZE_5. Can you make the pointer version any faster?
+
 ------------------------------------------------
 
 <h1>day three</h1>
