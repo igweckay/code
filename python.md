@@ -12,7 +12,7 @@ Today we are going to code the first part of a game called Hangman. We will be l
 2. output from a file
 3. various functions in the math library
 
-First, go to the following link and download the text file called 'phobias.txt'. [Link]
+First, go to the following link and download the text file called 'phobias.txt'. [Link](https://github.com/igweckay/code/tree/gh-pages/python_files)
 
 Place the file in the same directory as your script. First we are going to load the file and then print out the contents of the file to the screen.
 
@@ -73,7 +73,7 @@ If you are using Atom as your text editor, you may have to add lines 1 and 2 to 
 
 Your challenge is to randomly choose a word from the list and spell it out onto the screen. A sample output is below. If the word chosen is 'arachnoid':
 
-The file you will be reading files in from is named vocab_words.txt, and can be downloaded from the following [link]().
+The file you will be reading files in from is named vocab_words.txt, and can be downloaded from the following [link](https://github.com/igweckay/code/tree/gh-pages/python_files).
 
 <i><b>(bonus)</b> Have the program randomly choose a word from the list to be spelled. Have the program keep choosing words until you enter an exit key.</i>
 
