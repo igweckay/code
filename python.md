@@ -12,7 +12,7 @@ Programming Hangman.
 This will be a continuation of the challenge from day three. Now that you have been able to randomly choose a word from the document vocab_words.txt and parse through the word, you will now start asking for user input. Ask the user for a letter and if it matches one of the letters in the word, print out the letter at its position, if not, print out that they have guessed wrongly, and show them how many guesses they have remaining.
 
 Example run ...
-{% highlight python %}
+{% highlight %}
 Let's Play Hangman! It is a 3 letter word
 _ _ _  
 What is your first guess:  a
@@ -37,7 +37,7 @@ Below is a picture of a sample run.
 </center>
 <i>Photo curtesy of printactivities.com [Link](http://www.printactivities.com/Paper-Games/Rules-For-Hangman.shtml)</i>
 
-<b>[BONUS]: </b> Print out each part of the hangman upon each guess, only adding to it if the user guesses wrong. 
+<b>[BONUS]: </b> Print out each part of the hangman upon each guess, only adding to it if the user guesses wrong.
 
 
 
