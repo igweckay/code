@@ -31,7 +31,7 @@ t h e
 
 Hangman Rules: <br/>
 1. The guesser has 11 chances. A chance is deducted everytime they guess wrongly.
-<br/> 2. If the user guesses correctly, no deductions should occur.
+<br/>2. If the user guesses correctly, no deductions should occur.
 Below is a picture of a sample run.
 <center> <img src="../assets/hangman.png">
 </center>
