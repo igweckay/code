@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      day four with python &middot; code
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/code/assets/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/code/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/code/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/code/assets/apple-touch-icon.png">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/code/">
+          <h2 class="nav-title">code</h2>
+        </a>
+        <ul>
+          <li><a href="/code/about">About</a></li>
+          <li><a href="/code/python">Python</a></li>
+          <li><a href="/code/ccplusplus">C/C++</a></li>
+          <li><a href="/code/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    
+        kay
+    
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2018-05-08 00:00:00 -0400">May 08, 2018</time>
+    
+  </div>
+
+  <h1 class="post-title">day four with python</h1>
+  <div class="post-line"></div>
+
+  <h2 id="programming-challenge">Programming Challenge</h2>
+
+<p>Programming Hangman.</p>
+
+<p>This will be a continuation of the challenge from day three. Now that you have been able to randomly choose a word from the document vocab_words.txt and parse through the word, you will now start asking for user input. Ask the user for a letter and if it matches one of the letters in the word, print out the letter at its position, if not, print out that they have guessed wrongly, and show them how many guesses they have remaining.</p>
+
+<p>Example run …</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">Let's Play Hangman! It is a 3 letter word
+<span class="ge">_ _</span> _  
+What is your first guess:  a
+That is incorrect, you now have 5 more chances. What is your next guess: h
+There is 1 'h'
+<span class="ge">_ h _</span>
+Next guess: e
+Correct.
+_ h e
+There is one 'e'. Next guess: g
+Incorrect, you now have 4 guesses remaining. Next guess: t
+Hooray! You won! You have correctly spelled out the word 'the'.
+t h e</code></pre></figure>
+
+<p>Hangman Rules: <br /></p>
+<ol>
+  <li>The guesser has 11 chances. A chance is deducted everytime they guess wrongly.<br /></li>
+  <li>If the user guesses correctly, no deductions should occur.
+Below is a picture of a sample run.</li>
+</ol>
+<center> <img src="../assets/hangman.png" />
+</center>
+<p><i>Photo curtesy of printactivities.com <a href="http://www.printactivities.com/Paper-Games/Rules-For-Hangman.shtml">Link</a></i></p>
+
+<p><b>[BONUS]: </b> Print out each part of the hangman upon each guess, only adding to it if the user guesses wrong.</p>
+
+
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/code/2018-05-08/day-five-ccplusplus" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2018-05-08 19:14:05 -0400">2018</time> Kay Igwe.
+      </span>
+    </footer>
+  </body>
+
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</html>

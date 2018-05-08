@@ -7,7 +7,7 @@
 
   <title>
     
-      day three &middot; code
+      day four &middot; code
     
   </title>
 
@@ -48,10 +48,48 @@
     
   </div>
 
-  <h1 class="post-title">day three</h1>
+  <h1 class="post-title">day four</h1>
   <div class="post-line"></div>
 
-  <p>Today starts an Android app development series, where over the next week, we will program the steps of a game and build it into an app. Then you can add it to the app store if you would like.</p>
+  <h2 id="programming-challenge">Programming Challenge</h2>
+
+<p>Programming Hangman.</p>
+
+<p>This will be a continuation of the challenge from day three. Now that you have been able to randomly choose a word from the document vocab_words.txt and parse through the word, you will now start asking for user input. Ask the user for a letter and if it matches one of the letters in the word, print out the letter at its position, if not, print out that they have guessed wrongly, and show them how many guesses they have remaining.</p>
+
+<p>Example run …</p>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">Let's Play Hangman! It is a 3 letter word
+<span class="ge">_ _</span> _  
+What is your first guess:  a
+That is incorrect, you now have 5 more chances. What is your next guess: h
+There is 1 'h'
+<span class="ge">_ h _</span>
+Next guess: e
+Correct.
+_ h e
+There is one 'e'. Next guess: g
+Incorrect, you now have 4 guesses remaining. Next guess: t
+Hooray! You won! You have correctly spelled out the word 'the'.
+t h e</code></pre></figure>
+
+<p>Hangman Rules: <br /></p>
+<ol>
+  <li>The guesser has 11 chances. A chance is deducted everytime they guess wrongly.<br /></li>
+  <li>If the user guesses correctly, no deductions should occur.
+Below is a picture of a sample run.</li>
+</ol>
+<center> <img src="../assets/hangman.png" />
+</center>
+<p><i>Photo curtesy of printactivities.com <a href="http://www.printactivities.com/Paper-Games/Rules-For-Hangman.shtml">Link</a></i></p>
+
+<p><b>[BONUS]: </b> Print out each part of the hangman upon each guess, only adding to it if the user guesses wrong.</p>
+
+<hr />
+
+<h1>day three</h1>
+
+<p>Today starts an Android app development series, where over the next week, we will program the steps of a game and build it into an app. Then you can add it to the app store if you would like.</p>
 
 <p>Today we are going to code the first part of a game called Hangman. We will be learning the following …</p>
 <ol>
@@ -60,7 +98,7 @@
   <li>various functions in the math library</li>
 </ol>
 
-<p>First, go to the following link and download the text file called ‘phobias.txt’. [Link]</p>
+<p>First, go to the following link and download the text file called ‘phobias.txt’. <a href="https://github.com/igweckay/code/tree/gh-pages/python_files">Link</a></p>
 
 <p>Place the file in the same directory as your script. First we are going to load the file and then print out the contents of the file to the screen.</p>
 
@@ -112,11 +150,11 @@ Next we are going to output the contents of the file line by line using a ‘wit
 
 <p>If you are using Atom as your text editor, you may have to add lines 1 and 2 to your code. Those are the encoding declarations. For other editors, such as sublime, or if using Anaconda, adding those 2 lines may not be necessary.</p>
 
-<h2 id="programming-challenge">Programming challenge</h2>
+<h2 id="programming-challenge-1">Programming challenge</h2>
 
 <p>Your challenge is to randomly choose a word from the list and spell it out onto the screen. A sample output is below. If the word chosen is ‘arachnoid’:</p>
 
-<p>The file you will be reading files in from is named vocab_words.txt, and can be downloaded from the following <a href="">link</a>.</p>
+<p>The file you will be reading files in from is named vocab_words.txt, and can be downloaded from the following <a href="https://github.com/igweckay/code/tree/gh-pages/python_files">link</a>.</p>
 
 <p><i><b>(bonus)</b> Have the program randomly choose a word from the list to be spelled. Have the program keep choosing words until you enter an exit key.</i></p>
 
@@ -338,7 +376,7 @@ The video below walks you through opening the notebook and</p>
   <span class="k">else</span><span class="p">:</span>
       <span class="k">print</span><span class="p">(</span><span class="s">"Wrong guess, the number was 7"</span><span class="p">)</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<h2 id="programming-challenge-1">Programming Challenge</h2>
+<h2 id="programming-challenge-2">Programming Challenge</h2>
 
 <p>Ask the user for their name, store it in a variable and print out…
 Hello [the user’s name]
@@ -456,7 +494,7 @@ If you have a github account, great! You are almost ready to begin! Follow this 
 
     <footer>
       <span>
-        &copy; <time datetime="2018-05-06 16:47:20 -0400">2018</time> Kay Igwe.
+        &copy; <time datetime="2018-05-08 19:14:05 -0400">2018</time> Kay Igwe.
       </span>
     </footer>
   </body>
