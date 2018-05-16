@@ -5,6 +5,8 @@ author: "kay"
 permalink: /ccplusplus/
 ---
 
+<!---Latex Equations  http://latex.codecogs.com/eqneditor/editor.php --->
+
 Today will be a continuation of day four with Pointers.
 
 ## Programming Challenge
